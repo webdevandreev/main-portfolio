@@ -5,16 +5,40 @@
   <meta charset="UTF-8">
   <title>Название проекта</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/roboto/Roboto-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/inter/Inter-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="header">navigation</header>
-  <main>
-    <h1>Страница для старта</h1>
-  </main>
+  <div class="page__wrapper">
+    <header class="header">
+      <div class="header__container">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a class="header__nav-link" href="#">Главная</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#">О нас</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <h1 class="main__title">Добро пожаловать</h1>
+        <p class="main__text">Это основной контент страницы.</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__text">&copy; 2023 Мой проект</p>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
