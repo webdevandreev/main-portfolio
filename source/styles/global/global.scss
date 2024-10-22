@@ -1,8 +1,42 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+// global.scss
+
+@import "variables";
+
+// Глобальные стили
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: $font-family-default;
+  color: $color-text-main;
+  background-color: $background-color;
+}
+
+body {
+  font-family: $font-family-default;
+  /* stylelint-disable-next-line no-unknown-custom-properties */
+  color: var(--color-text-main);
+  /* stylelint-disable-next-line no-unknown-custom-properties */
+  background-color: var(--background-color);
+  transition: color 0.3s, background-color 0.3s; // Добавляем плавный переход при смене темы
+}
+
+// Типографика
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+  /* stylelint-disable-next-line no-unknown-custom-properties */
+  color: var(--color-text-main);
 }
 
 img {
@@ -12,6 +46,13 @@ img {
 
 a {
   text-decoration: none;
+  /* stylelint-disable-next-line no-unknown-custom-properties */
+  color: var(--color-text-main);
+  transition: color 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .visually-hidden {
@@ -25,9 +66,4 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-body {
-  margin: 0;
-  font-family: "Roboto", "Arial", sans-serif;
 }

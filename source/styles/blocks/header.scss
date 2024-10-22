@@ -1,5 +1,36 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  padding: 12px 20px;
+  background-color: $background-color; // Переменную добавим в variables.scss
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    font-family: $font-family-inter; // Переменную добавим в variables.scss
+    font-weight: 500;
+    font-size: 12px;
+    color: $color-black; // Переменную добавим в variables.scss
+    text-decoration: none;
+  }
+
+  &__item {
+    &:first-child {
+      .header__link {
+        text-align: center;
+        width: 25px;
+      }
+    }
+
+    &:last-child {
+      .header__link {
+        width: 37px;
+        text-align: left;
+      }
+    }
+  }
 }
