@@ -11,7 +11,11 @@
 
 html,
 body {
+  display: flex;
   margin: 0;
+  justify-content: center; // Центрирование по горизонтали
+  align-items: flex-start; // Выравнивание по верхнему краю
+  min-height: 100vh; // Занять всю высоту экрана
   font-family: $font-family-default;
   color: $color-text-main;
   background-color: $background-color;
