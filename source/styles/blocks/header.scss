@@ -1,36 +1,22 @@
 .header {
   padding: 12px 20px;
-  background-color: $background-color; // Переменную добавим в variables.scss
+  background-color: $background-color;
 
-  &__list {
+  &__nav-list {
     display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
-    list-style: none;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    text-align: center;
   }
 
-  &__link {
-    font-family: $font-family-inter; // Переменную добавим в variables.scss
+  &__nav-link {
+    font-family: $font-family-inter;
     font-weight: 500;
-    font-size: 12px;
-    color: $color-black; // Переменную добавим в variables.scss
+    font-size: 20px;
+    color: $color-black;
     text-decoration: none;
-  }
-
-  &__item {
-    &:first-child {
-      .header__link {
-        text-align: center;
-        width: 25px;
-      }
-    }
-
-    &:last-child {
-      .header__link {
-        width: 37px;
-        text-align: left;
-      }
-    }
   }
 }
