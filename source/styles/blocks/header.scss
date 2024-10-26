@@ -1,78 +1,77 @@
-$background-color: #ffffff; // Замените на ваш цвет
-$font-family-inter: "Inter", sans-serif; // Замените на ваш шрифт
-$color-black: #000000; // Замените на ваш цвет
+// Переменные для цветов и отступов
+$gap-small: 10px;
+$gap-large: 5px;
 
-header {
-  padding: 12px 20px;
-  background-color: $background-color;
+.header {
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   &__top {
     display: flex;
-    justify-content: space-between;
-    align-items: center; // Центрируем элементы по вертикали
-    width: 100%;
-    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $gap-small;
+    justify-content: space-between; // для маленьких экранов и выше
+  }
 
-    & .header__button {
-      display: block; // Показываем кнопку по умолчанию на мобильных
-    }
+  &__logo {
+    font-size: 14px;
+  }
+
+  &__theme-toggle,
+  &__button {
+    font-size: 14px;
   }
 
   &__nav {
-    display: none; // Скрываем навигацию по умолчанию
+    margin-top: $gap-small;
 
-    &--active {
-      display: block; // Показываем навигацию, когда она активна
-    }
-
-    &__nav-list {
+    &-list {
       display: flex;
-      flex-direction: column; // Вертикальное расположение для мобильных
-      list-style: none;
-      padding: 0;
-      margin: 0;
+      gap: $gap-large;
+      list-style: none; // Убираем маркеры списка
+      padding-left: 0;
 
       /* stylelint-disable-next-line max-nesting-depth */
-      & .header__nav-item {
-        margin: 5px 0; // Отступы между элементами
+      &-item {
+        /* stylelint-disable-next-line max-nesting-depth */
+        &-link {
+          text-decoration: none;
+          color: inherit;
+        }
       }
     }
   }
+}
 
-  &__nav-link {
-    font-family: $font-family-inter;
-    font-weight: 500;
-    font-size: 20px;
-    color: $color-black;
-    text-decoration: none;
-  }
-
-  // Мобильное разрешение
-  @media (max-width: 320px) {
-    &__nav {
-      display: none; // Скрываем навигацию на мобильных
-    }
-
-    &__button {
-      display: block; // Показываем кнопку для раскрытия навигации
+// Медиа-запрос для экранов до 320px (колоночный макет только для навигации)
+@media (max-width: 320px) {
+  .header__nav {
+    &-list {
+      flex-direction: column; // Навигация в колонку
+      gap: $gap-small; // Меньшие отступы для компактного вида
     }
   }
+}
 
-  // Разрешение 768px и выше
-  @media (min-width: 768px) {
+// Медиа-запрос для экранов от 768px и выше
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__top {
+      flex: 1;
+      justify-content: flex-start;
+      gap: $gap-large;
+    }
+
     &__nav {
-      display: block; // Показываем навигацию на больших экранах
-    }
-
-    &__button {
-      display: none; // Скрываем кнопку на больших экранах
-    }
-
-    &__nav-list {
-      flex-direction: row; // Горизонтальное расположение для десктопа
+      margin-top: 0; // Убираем отступ сверху
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
