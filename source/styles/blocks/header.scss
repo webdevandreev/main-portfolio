@@ -1,3 +1,7 @@
+$background-color: #ffffff; // Замените на ваш цвет
+$font-family-inter: "Inter", sans-serif; // Замените на ваш шрифт
+$color-black: #000000; // Замените на ваш цвет
+
 .header {
   padding: 12px 20px;
   background-color: $background-color;
@@ -13,26 +17,27 @@
     padding: 10px;
 
     & .header__button {
-      display: none; // Скрываем кнопку по умолчанию
+      display: block; // Показываем кнопку по умолчанию на мобильных
     }
   }
 
   &__nav {
-    display: none; // Скрываем навигацию на мобильных
+    display: none; // Скрываем навигацию по умолчанию
 
-    @media (min-width: 768px) {
-      display: block; // Показываем навигацию на больших экранах
+    &--active {
+      display: block; // Показываем навигацию, когда она активна
     }
   }
 
   &__nav-list {
     display: flex;
+    flex-direction: column; // Вертикальное расположение для мобильных
     list-style: none;
     padding: 0;
     margin: 0;
 
     & .header__nav-item {
-      margin: 0 10px;
+      margin: 5px 0; // Отступы между элементами
     }
   }
 
@@ -47,11 +52,26 @@
   // Мобильное разрешение
   @media (max-width: 320px) {
     &__nav {
-      display: none; // Скрываем навигацию
+      display: none; // Скрываем навигацию на мобильных
     }
 
     &__button {
       display: block; // Показываем кнопку для раскрытия навигации
+    }
+  }
+
+  // Разрешение 768px и выше
+  @media (min-width: 768px) {
+    &__nav {
+      display: block; // Показываем навигацию на больших экранах
+    }
+
+    &__button {
+      display: none; // Скрываем кнопку на больших экранах
+    }
+
+    &__nav-list {
+      flex-direction: row; // Горизонтальное расположение для десктопа
     }
   }
 }
