@@ -4,6 +4,5 @@ const nav = document.querySelector('.header__nav');
 
 // Добавляем обработчик события на кнопку
 button.addEventListener('click', () => {
-  // Проверяем текущее состояние навигации
   nav.classList.toggle('header__nav--active'); // Переключаем класс активности
 });

@@ -2,7 +2,7 @@ $background-color: #ffffff; // Замените на ваш цвет
 $font-family-inter: "Inter", sans-serif; // Замените на ваш шрифт
 $color-black: #000000; // Замените на ваш цвет
 
-.header {
+header {
   padding: 12px 20px;
   background-color: $background-color;
   display: flex;
@@ -27,17 +27,18 @@ $color-black: #000000; // Замените на ваш цвет
     &--active {
       display: block; // Показываем навигацию, когда она активна
     }
-  }
 
-  &__nav-list {
-    display: flex;
-    flex-direction: column; // Вертикальное расположение для мобильных
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    &__nav-list {
+      display: flex;
+      flex-direction: column; // Вертикальное расположение для мобильных
+      list-style: none;
+      padding: 0;
+      margin: 0;
 
-    & .header__nav-item {
-      margin: 5px 0; // Отступы между элементами
+      /* stylelint-disable-next-line max-nesting-depth */
+      & .header__nav-item {
+        margin: 5px 0; // Отступы между элементами
+      }
     }
   }
 
