@@ -1,5 +1,5 @@
 // Переменные для цветов и отступов
-$gap-small: 10px;
+$gap-small: 14px;
 $gap-large: 5px;
 
 .header {
@@ -8,10 +8,23 @@ $gap-large: 5px;
 
   &__top {
     display: flex;
+    margin-bottom: 22px;
+    height: 33px;
     flex-wrap: wrap;
     align-items: center;
-    gap: $gap-small;
     justify-content: space-between; // для маленьких экранов и выше
+    position: relative;
+
+    &::after {
+      content: ""; // Создаем пустой контент
+      position: absolute; // Абсолютное позиционирование
+      bottom: -5px; // Располагаем под элементом
+      left: 50%; // Центрируем по горизонтали
+      transform: translateX(-50%); // Смещаем влево на половину ширины
+      width: 290px; // Задаем ширину
+      height: 1px; // Задаем высоту подчеркивания
+      background-color: #171c28; // Цвет подчеркивания
+    }
   }
 
   &__logo {
@@ -20,17 +33,25 @@ $gap-large: 5px;
 
   &__theme-toggle,
   &__button {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   &__nav {
     margin-top: $gap-small;
 
+    &.hidden {
+      display: none; // Скрывает навигацию
+    }
+
     &-list {
       display: flex;
-      gap: $gap-large;
-      list-style: none; // Убираем маркеры списка
       padding-left: 0;
+      gap: $gap-large;
+      font-size: 14px;
+      font-weight: 500;
+      list-style: none; // Убираем маркеры списка
+      text-align: center;
+      text-transform: uppercase;
 
       /* stylelint-disable-next-line max-nesting-depth */
       &-item {

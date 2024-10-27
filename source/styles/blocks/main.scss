@@ -1,0 +1,12 @@
+.main {
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Inter", "Arial", sans-serif;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

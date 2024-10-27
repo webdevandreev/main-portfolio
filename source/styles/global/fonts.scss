@@ -1,4 +1,6 @@
 @include font-face("Roboto", 400, normal, url("../../fonts/roboto/Roboto-Regular.woff2") format("woff2"));
+@include font-face("Roboto", 500, normal, url("../../fonts/roboto/Roboto-Medium.woff2") format("woff2"));
+@include font-face("Roboto", 600, normal, url("../../fonts/roboto/Roboto-Bold.woff2") format("woff2"));
 @include font-face("Inter", 400, normal, url("../../fonts/inter/Inter-Regular.woff2") format("woff2"));
 @include font-face("Inter", 600, normal, url("../../fonts/inter/Inter-Bold.woff2") format("woff2"));
 @include font-face("Inter", 500, normal, url("../../fonts/inter/Inter-Medium.woff2") format("woff2"));
