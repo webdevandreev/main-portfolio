@@ -3,7 +3,7 @@
 
   &__top {
     display: flex;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     height: 33px;
     flex-wrap: wrap;
     align-items: center;
@@ -32,6 +32,7 @@
   }
 
   &__nav {
+    margin-top: 5px;
     position: absolute; // Позиция под header__top
     top: 100%; // Устанавливаем под верхним элементом
     left: 0;
@@ -40,8 +41,8 @@
     z-index: 1000;
     max-height: 0; // Начальная высота
     overflow: hidden; // Скрываем содержимое
-    transition: max-height 0.3s ease-in-out; // Плавный переход по высоте
-    padding: 0; // Убираем отступы по умолчанию
+    transition: max-height 0.5s ease-in-out; // Плавный переход по высоте
+    padding: 10px 0; // Убираем отступы по умолчанию
 
     &.visible {
       max-height: 300px; // Максимальная высота при открытии (подберите под ваши нужды)
