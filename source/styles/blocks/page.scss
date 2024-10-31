@@ -1,5 +1,16 @@
-.page__wrapper {
-  width: 100%; // Занять всю ширину
-  padding: 0 15px; // Отступы
-  box-sizing: border-box; // Учитываем отступы в ширине
+.page {
+  &__wrapper {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+
+.content-wrapper {
+  transition: transform 0.3s ease-out;
+  background-color: $background-color;
+
+  &.nav-open {
+    transform: translateY(300px);
+  }
 }

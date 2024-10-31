@@ -1,12 +1,18 @@
 .main {
+  &__container {
+    padding: 20px 0;
+  }
+
   &__title {
     font-size: 24px;
     font-weight: 700;
     font-family: "Inter", "Arial", sans-serif;
+    margin-bottom: 15px;
   }
 
   &__text {
     font-size: 14px;
     font-weight: 400;
+    line-height: 1.5;
   }
 }
