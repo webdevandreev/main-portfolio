@@ -5,11 +5,14 @@
 
   &__top {
     display: flex;
+    margin-bottom: 5px;
     height: 33px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    background-color: $background-color; // Добавляем фон
+    z-index: 1001; // Увеличиваем z-index чтобы быть поверх навигации
 
     &::after {
       content: "";
@@ -23,28 +26,32 @@
     }
   }
 
-  &__logo {
-    font-size: 14px;
-  }
-
-  &__theme-toggle,
-  &__button {
-    font-size: 12px;
-  }
-
   &__nav {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 33px;
     left: 0;
     right: 0;
     background-color: $background-color;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
     z-index: 1000;
+    // Делаем появление навигации синхронным с движением контента
+    transition:
+      max-height 0.3s ease-out,
+      visibility 0s 0.1s,
+      opacity 0.3s ease-out;
 
     &.visible {
       max-height: 300px;
+      visibility: visible;
+      opacity: 1;
+      // Задерживаем появление навигации, чтобы оно совпало с движением контента
+      transition:
+        max-height 0.3s ease-out,
+        visibility 0s,
+        opacity 0.3s ease-out 0.1s; // Добавляем небольшую задержку
     }
 
     &-list {
@@ -68,26 +75,6 @@
           padding: 10px;
         }
       }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .header {
-    &__nav {
-      position: static;
-      max-height: none;
-      overflow: visible;
-
-      &-list {
-        flex-direction: row;
-        justify-content: flex-end;
-        padding: 0;
-      }
-    }
-
-    &__button {
-      display: none;
     }
   }
 }

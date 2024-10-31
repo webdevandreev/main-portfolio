@@ -9,8 +9,10 @@
 .content-wrapper {
   transition: transform 0.3s ease-out;
   background-color: $background-color;
+  position: relative;
+  z-index: 999; // Добавляем z-index меньше чем у header
 
   &.nav-open {
-    transform: translateY(300px);
+    transform: translateY(135px);
   }
 }

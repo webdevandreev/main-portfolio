@@ -28,6 +28,10 @@ body {
   /* stylelint-disable-next-line no-unknown-custom-properties */
   background-color: var(--background-color);
   transition: color 0.3s, background-color 0.3s; // Добавляем плавный переход при смене темы
+
+  &.nav-open {
+    overflow: hidden;
+  }
 }
 
 // Типографика
