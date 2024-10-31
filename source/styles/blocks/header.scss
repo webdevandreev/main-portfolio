@@ -11,8 +11,8 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-color: $background-color; // Добавляем фон
-    z-index: 1001; // Увеличиваем z-index чтобы быть поверх навигации
+    background-color: $background-color;
+    z-index: 1001;
 
     &::after {
       content: "";
@@ -37,7 +37,6 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
-    // Делаем появление навигации синхронным с движением контента
     transition:
       max-height 0.3s ease-out,
       visibility 0s 0.1s,
@@ -47,11 +46,10 @@
       max-height: 300px;
       visibility: visible;
       opacity: 1;
-      // Задерживаем появление навигации, чтобы оно совпало с движением контента
       transition:
         max-height 0.3s ease-out,
         visibility 0s,
-        opacity 0.3s ease-out 0.1s; // Добавляем небольшую задержку
+        opacity 0.3s ease-out 0.1s;
     }
 
     &-list {

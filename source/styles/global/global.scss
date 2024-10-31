@@ -13,12 +13,12 @@ html,
 body {
   display: flex;
   margin: 0;
-  justify-content: center; // Центрирование по горизонтали
-  align-items: flex-start; // Выравнивание по верхнему краю
-  min-height: 100vh; // Занять всю высоту экрана
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
   font-family: $font-family-default;
   color: $color-text-main;
-  background-color: #00a4ff; //background-color: $background-color;
+  background-color: #00a4ff;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   color: var(--color-text-main);
   /* stylelint-disable-next-line no-unknown-custom-properties */
   background-color: var(--background-color);
-  transition: color 0.3s, background-color 0.3s; // Добавляем плавный переход при смене темы
+  transition: color 0.3s, background-color 0.3s;
 
   &.nav-open {
     overflow: hidden;

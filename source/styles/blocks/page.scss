@@ -10,7 +10,7 @@
   transition: transform 0.3s ease-out;
   background-color: $background-color;
   position: relative;
-  z-index: 999; // Добавляем z-index меньше чем у header
+  z-index: 999;
 
   &.nav-open {
     transform: translateY(135px);

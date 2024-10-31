@@ -23,7 +23,7 @@
   &__item-title {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 6px; // Уменьшили отступ
+    margin-bottom: 6px;
     position: relative;
 
     &::before {
@@ -43,7 +43,7 @@
   &__item-description {
     font-size: 14px;
     line-height: 1.4;
-    margin-bottom: 2px; // Уменьшили отступ
+    margin-bottom: 2px;
     position: relative;
     padding-left: 15px;
 
@@ -66,19 +66,19 @@
     font-style: italic;
     color: #666666;
     margin-top: 0;
-    margin-bottom: 2px; // Уменьшили отступ
-    padding-left: 15px; // Добавили отступ слева для выравнивания
-    position: relative; // Добавили для псевдоэлемента
+    margin-bottom: 2px;
+    padding-left: 15px;
+    position: relative;
 
     &::before {
-      content: ""; // Добавляем пустой псевдоэлемент для сохранения выравнивания
+      content: "";
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
       width: 6px;
       height: 6px;
-      opacity: 0; // Делаем его невидимым
+      opacity: 0;
     }
   }
 }
