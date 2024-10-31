@@ -1,0 +1,84 @@
+.courses {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px; // Уменьшили отступ
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: currentColor;
+      border: 1px solid currentColor;
+    }
+  }
+
+  &__item-description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 2px; // Уменьшили отступ
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $background-color;
+      border: 1px solid currentColor;
+    }
+  }
+
+  &__item-status {
+    font-size: 12px;
+    font-style: italic;
+    color: #666666;
+    margin-top: 0;
+    margin-bottom: 2px; // Уменьшили отступ
+    padding-left: 15px; // Добавили отступ слева для выравнивания
+    position: relative; // Добавили для псевдоэлемента
+
+    &::before {
+      content: ""; // Добавляем пустой псевдоэлемент для сохранения выравнивания
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      opacity: 0; // Делаем его невидимым
+    }
+  }
+}
