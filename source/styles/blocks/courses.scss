@@ -32,8 +32,8 @@
       left: -15px;
       top: 50%;
       transform: translateY(-50%);
-      width: 4px;
-      height: 4px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background-color: currentColor;
       border: 1px solid currentColor;
@@ -43,6 +43,7 @@
   &__item-description {
     font-size: 14px;
     line-height: 1.4;
+    margin-top: 5px;
     margin-bottom: 2px;
     position: relative;
     padding-left: 15px;
@@ -51,10 +52,10 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 10px;
+      top: 9px;
       transform: translateY(-50%);
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background-color: $background-color;
       border: 1px solid currentColor;
