@@ -56,6 +56,7 @@
       font-weight: 600;
       margin: 0;
       line-height: 1.4;
+      color: $color-text-main;
     }
 
     &--html-css {
@@ -65,32 +66,26 @@
 
     &--javascript {
       background-color: #f8e23a;
-      color: #ffffff; // Переместили сюда
     }
 
     &--vscode {
       background-color: #38afff;
-      color: #ffffff; // Переместили сюда
     }
 
     &--gulp {
       background-color: #e39292;
-      color: #ffffff; // Переместили сюда
     }
 
     &--sass {
       background-color: #cc6699;
-      color: #ffffff; // Переместили сюда
     }
 
     &--nodejs {
       background-color: #339933;
-      color: #ffffff; // Переместили сюда
     }
 
     &--github-git {
       background: #7c72ff;
-      color: #ffffff; // Переместили сюда
     }
   }
 }

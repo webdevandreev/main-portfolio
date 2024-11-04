@@ -9,10 +9,21 @@
   margin-bottom: 60px;
 
   &__title {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
     margin-bottom: 30px;
-    text-align: center;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 120%;
+      height: 3px;
+      background-color: #00b7c7;
+    }
   }
 
   &__container {
