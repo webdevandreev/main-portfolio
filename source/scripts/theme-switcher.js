@@ -1,5 +1,3 @@
-// source/scripts/theme-switcher.js
-
 function toggleTheme() {
   const body = document.body;
   body.classList.toggle('dark-theme');
