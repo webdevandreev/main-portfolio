@@ -24,6 +24,7 @@ function initThemeSwitcher() {
       document.body,
       document.querySelector('.header'),
       document.querySelector('.main'),
+      document.querySelector('.header__top'),
     ];
 
     elements.forEach((element) => {
