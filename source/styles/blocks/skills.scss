@@ -47,7 +47,7 @@
     justify-content: center;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
@@ -59,8 +59,8 @@
     }
 
     &--html-css {
-      background: linear-gradient(to right, #e44d26, #0070ba);
-      color: #ffffff; // Переместили сюда
+      background-color: #e44d26;
+      color: #ffffff;
     }
 
     &--javascript {
@@ -89,7 +89,7 @@
     }
 
     &--github-git {
-      background: linear-gradient(to right, #171515, #f34f29);
+      background: #7c72ff;
       color: #ffffff; // Переместили сюда
     }
   }
@@ -137,8 +137,8 @@
     }
 
     &__block {
-      padding: 15px;
-      min-height: 60px;
+      padding: 10px;
+      min-height: 40px;
 
       &-title {
         font-size: 15px;
