@@ -26,6 +26,49 @@
     }
   }
 
+  &__theme-toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "☀️";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      transition: opacity 0.3s ease;
+    }
+
+    &::after {
+      content: "🌙";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &.dark-mode {
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::before {
+        opacity: 0;
+      }
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
   &__nav {
     position: fixed;
     top: 33px;
