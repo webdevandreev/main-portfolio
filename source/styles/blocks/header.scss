@@ -29,7 +29,22 @@
       transform: translateX(-50%);
       width: 290px;
       height: 1px;
-      background-color: #171c28;
+      background-color: $color-text-main;
+    }
+  }
+
+  /* stylelint-disable-next-line no-duplicate-selectors */
+  &.dark-theme {
+    background-color: $color-dark;
+    color: $color-light;
+
+    .header__top {
+      background-color: $color-dark;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::after {
+        background-color: $color-light;
+      }
     }
   }
 
