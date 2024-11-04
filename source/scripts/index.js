@@ -1,3 +1,7 @@
+// source/scripts/index.js
+
+import { initThemeSwitcher } from './theme-switcher.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector('.header__button');
   const nav = document.querySelector('.header__nav');
@@ -7,4 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.toggle('visible');
     contentWrapper.classList.toggle('nav-open');
   });
+
+  // Инициализация переключателя темы
+  initThemeSwitcher();
 });
