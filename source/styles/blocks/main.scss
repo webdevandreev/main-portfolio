@@ -1,4 +1,13 @@
 .main {
+  background-color: $background-color;
+  color: $color-text-main;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.dark-theme {
+    background-color: $color-dark;
+    color: $color-light;
+  }
+
   &__container {
     padding: 20px 0;
   }
