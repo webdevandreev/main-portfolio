@@ -26,7 +26,7 @@
   }
 
   &__item {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     &:last-child {
       margin-bottom: 0;
@@ -36,8 +36,8 @@
   &__item-title {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 10px;
-    color: #00b7c7; // Выделение названий технологий цветом
+    margin-bottom: 5px;
+    color: #00b7c7;
   }
 
   &__item-description {
@@ -78,7 +78,7 @@
     }
 
     &__item {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     &__item-title {
