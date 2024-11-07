@@ -34,6 +34,12 @@
     }
   }
 
+  @media (max-width: 768px) {
+    &__top::after {
+      width: calc(100% - 40px); // Отступы по 20px с каждой стороны
+    }
+  }
+
   /* stylelint-disable-next-line no-duplicate-selectors */
   &.dark-theme {
     background-color: $color-dark;
