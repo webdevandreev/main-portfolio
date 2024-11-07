@@ -36,7 +36,7 @@
 
   @media (max-width: 768px) {
     &__top::after {
-      width: calc(100% - 40px); // Отступы по 20px с каждой стороны
+      width: 100%;
     }
   }
 
