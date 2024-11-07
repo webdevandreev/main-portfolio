@@ -1,12 +1,10 @@
 .footer {
-  margin-top: 60px;
-  padding: 40px 0;
+  padding: 20px 0;
   background-color: $background-color; // Используем основной цвет фона
 
   &__container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
   }
 
   &__title {
@@ -87,13 +85,11 @@
     &__content {
       flex-flow: row wrap;
       height: auto;
-      justify-content: center;
       gap: 20px;
     }
 
     &__block {
       &--social {
-        width: 100%;
         justify-content: center;
       }
     }
