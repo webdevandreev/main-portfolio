@@ -1,0 +1,101 @@
+.footer {
+  margin-top: 60px;
+  padding: 40px 0;
+  background-color: $background-color; // Используем основной цвет фона
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: $color-text-main;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      height: 1px;
+      background-color: $color-text-main;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 43px;
+    margin-top: 20px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &--logo {
+      flex-grow: 0;
+    }
+
+    &--social {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  &__logo {
+    color: $color-text-main;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba($color-text-main, 0.1);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($color-text-main, 0.2);
+    }
+  }
+
+  &__icon {
+    fill: $color-text-main;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Медиа-запрос для мобильных устройств
+@media (max-width: 320px) {
+  .footer {
+    &__content {
+      flex-flow: row wrap;
+      height: auto;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__block {
+      &--social {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
