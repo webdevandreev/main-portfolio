@@ -7,6 +7,15 @@
   &.dark-theme {
     background-color: $color-dark;
     color: $color-light;
+
+    &__title {
+      color: $color-light; // Изменение цвета заголовка
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::after {
+        background-color: $color-light; // Изменение цвета подчеркивания
+      }
+    }
   }
 
   &__container {
