@@ -1,6 +1,13 @@
 .footer {
   padding: 20px 0;
   background-color: $background-color; // Используем основной цвет фона
+  color: $color-text-main;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.dark-theme {
+    background-color: $color-dark;
+    color: $color-light;
+  }
 
   &__container {
     max-width: 1200px;
