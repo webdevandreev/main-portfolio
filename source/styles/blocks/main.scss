@@ -13,14 +13,14 @@
   }
 
   &__title {
-    font-size: clamp(1.5rem, 2rem, calc(2rem + ((1vw - 48px) * 0.2)));// Адаптивный размер шрифта
+    font-size: clamp(24px, 2vw + 16px, 40px);
     font-weight: 700;
     font-family: "Roboto", "Arial", sans-serif;
     margin-bottom: 15px;
   }
 
   &__text {
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw + 10px, 24px);
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 30px;
