@@ -13,7 +13,7 @@
   }
 
   &__title {
-    font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.77)), 2rem); // Адаптивный размер шрифта
+    font-size: clamp(1.5rem, 2rem, calc(2rem + ((1vw - 48px) * 0.2)));
     font-weight: 700;
     font-family: "Roboto", "Arial", sans-serif;
     margin-bottom: 15px;
@@ -27,11 +27,11 @@
   }
 
   &__text-highlight {
-    font-size: 40px; /* Размер шрифта для буквы "С" */
-    line-height: 0.8; /* Уменьшаем высоту строки для выделенной буквы */
-    display: inline-block; /* Позволяет букве занимать отдельную строку */
-    vertical-align: top; /* Выравнивание по верхнему краю */
-    margin-right: 5px; /* Отступ справа для лучшего визуального восприятия */
+    font-size: 40px;
+    line-height: 0.8;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
   }
 }
 
