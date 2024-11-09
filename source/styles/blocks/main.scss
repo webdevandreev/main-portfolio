@@ -25,6 +25,14 @@
     line-height: 1.5;
     margin-bottom: 30px;
   }
+
+  &__text-highlight {
+    font-size: 40px; /* Размер шрифта для буквы "С" */
+    line-height: 0.8; /* Уменьшаем высоту строки для выделенной буквы */
+    display: inline-block; /* Позволяет букве занимать отдельную строку */
+    vertical-align: top; /* Выравнивание по верхнему краю */
+    margin-right: 5px; /* Отступ справа для лучшего визуального восприятия */
+  }
 }
 
 .courses {
