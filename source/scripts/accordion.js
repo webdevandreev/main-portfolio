@@ -1,7 +1,7 @@
-const skillsListItems = document.querySelectorAll('.skills__list');
+const skillsListItems = document.querySelectorAll('.skills__block');
 
 skillsListItems.forEach((item) => {
-  const info = item.querySelector('.skill-info');
+  const info = item.querySelector('.skills__list');
 
   item.addEventListener('mouseenter', () => {
     info.classList.add('show'); // Показать дополнительную информацию
