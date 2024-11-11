@@ -90,8 +90,17 @@
   }
 
   &__list {
+    max-height: 0; /* Начальное состояние - скрыто */
+    padding: 0 5px; /* Убираем отступы */
+    overflow: hidden; /* Скрыть переполнение */
     text-align: start;
     padding-left: 20px;
+    transition: max-height 0.5s ease, padding 0.3s ease; /* Плавный переход */
+  }
+
+  &__list.show {
+    max-height: 300px; /* Максимальная высота при раскрытии */
+    padding: 5px; /* Добавляем отступы при раскрытии */
   }
 }
 
