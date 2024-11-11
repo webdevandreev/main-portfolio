@@ -88,6 +88,11 @@
       background: #7c72ff;
     }
   }
+
+  &__list {
+    text-align: start;
+    padding-left: 20px;
+  }
 }
 
 // Медиа-запрос для планшетов
