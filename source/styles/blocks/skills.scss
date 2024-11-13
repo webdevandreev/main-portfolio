@@ -8,6 +8,12 @@
     position: relative;
     display: inline-block;
 
+    /* stylelint-disable-next-line max-nesting-depth */
+    @media screen and (min-width: 768px) {
+      text-align: start;
+      margin-bottom: 10px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -23,6 +29,11 @@
     background-color: #112b3a;
     padding: 15px;
     border-radius: 20px;
+
+    // Стили для разрешения 768px и выше
+    @media screen and (min-width: 768px) {
+      background-color: transparent; // Убираем фон
+    }
   }
 
   &__row {
@@ -38,13 +49,14 @@
 
   &__block {
     flex: 1;
-    padding: 10px;
+    padding: 7px;
     border-radius: 15px;
     text-align: center;
     min-height: 40px;
     display: inline-block;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -56,34 +68,74 @@
       margin: 0;
       line-height: 1.4;
       color: $color-text-main;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        text-align: start;
+      }
     }
 
     &--html-css {
       background-color: #df9477;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        background-color: transparent; // Убираем фон для html-css
+      }
     }
 
     &--javascript {
       background-color: #f8e23a;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        background-color: transparent; // Убираем фон для javascript
+      }
     }
 
     &--vscode {
       background-color: #38afff;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        background-color: transparent; // Убираем фон для vscode
+      }
     }
 
     &--gulp {
       background-color: #e39292;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        background-color: transparent; // Убираем фон для gulp
+      }
     }
 
     &--sass {
       background-color: #cc6699;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        background-color: transparent; // Убираем фон для sass
+      }
     }
 
     &--nodejs {
       background-color: #339933;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        background-color: transparent; // Убираем фон для nodejs
+      }
     }
 
     &--github-git {
       background: #7c72ff;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      @media screen and (min-width: 768px) {
+        background-color: transparent; // Убираем фон для github-git
+      }
     }
   }
 
@@ -94,10 +146,22 @@
     overflow: hidden; /* Скрыть переполнение */
     text-align: start;
     padding-left: 20px;
-    transition: max-height 0.8s ease; /* Плавный переход */
+    opacity: 0;
+    transition: max-height 0.8s ease-in-out, opacity 1s ease; /* Плавный переход */
+    pointer-events: none;
+
+    // Стили для разрешения 768px и выше
+    @media screen and (min-width: 768px) {
+      margin-left: 20px;
+      max-height: 500px; /* Устанавливаем максимальную высоту */
+      opacity: 1; /* Делаем видимыми */
+      pointer-events: auto; /* Включаем события мыши */
+    }
   }
 
   &__list.show {
+    opacity: 1;
+    pointer-events: auto;
     max-height: 500px; /* Максимальная высота при раскрытии */
   }
 }
