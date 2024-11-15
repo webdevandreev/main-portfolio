@@ -56,7 +56,7 @@
   }
 
   &__nav {
-    position: fixed;
+    position: none;
     top: 33px;
     left: 0;
     right: 0;
@@ -72,7 +72,8 @@
       opacity 0.3s ease-out;
 
     &.visible {
-      max-height: 300px;
+      display: block;
+      max-height: 200px;
       visibility: visible;
       opacity: 1;
       transition:
