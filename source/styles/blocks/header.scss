@@ -55,8 +55,28 @@
     }
   }
 
+  @media (min-width: 768px) {
+    &__theme-toggle {
+      position: absolute;
+      top: 43px;
+      right: 0;
+      padding-top: 10px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__theme-toggle button {
+      border: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__button {
+      display: none;
+    }
+  }
+
   &__nav {
-    position: none;
     top: 33px;
     left: 0;
     right: 0;
@@ -103,6 +123,35 @@
           padding: 10px;
         }
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__nav {
+      display: block;
+      max-height: 200px;
+      visibility: visible;
+      opacity: 1;
+      transition:
+        max-height 0.3s ease-out,
+        visibility 0s,
+        opacity 0.3s ease-out 0.1s;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__nav-list {
+      display: flex;
+      position: absolute;
+      top: -12px;
+      right: 0;
+      flex-direction: row;
+      padding: 28px 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+      gap: 15px;
+      z-index: 1002;
     }
   }
 }
