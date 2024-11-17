@@ -2,21 +2,40 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
+    display: flex;
+    margin: 0 auto 40px; /* Автоматические отступы по бокам */
+    max-width: 800px; /* Задайте максимальную ширину, если нужно */
   }
 
   &__title {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      align-self: center;
+      margin-bottom: 45px;
+    }
   }
 
   &__list {
     list-style-type: none;
     padding: 0;
+    position: relative;
 
     @media screen and (min-width: 768px) {
       margin-left: 30px;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::before {
+        content: "";
+        position: absolute;
+        left: -27px;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 100%;
+        background-color: $color-text-main;
+      }
     }
   }
 

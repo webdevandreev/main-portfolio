@@ -34,6 +34,16 @@
     @media screen and (min-width: 768px) {
       background-color: transparent; // Убираем фон
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 100%;
+      background-color: $color-text-main;
+    }
   }
 
   &__row {
