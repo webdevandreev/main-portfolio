@@ -26,6 +26,7 @@
   }
 
   &__container {
+    position: relative;
     background-color: #112b3a;
     padding: 15px;
     border-radius: 20px;
@@ -33,16 +34,19 @@
     // Стили для разрешения 768px и выше
     @media screen and (min-width: 768px) {
       background-color: transparent; // Убираем фон
-    }
+      margin-left: 10px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: -27px;
-      transform: translateX(-50%);
-      width: 3px;
-      height: 100%;
-      background-color: $color-text-main;
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::before {
+        content: "";
+        position: absolute;
+        top: 23px;
+        left: -7px;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 96%;
+        background-color: $color-text-main;
+      }
     }
   }
 
