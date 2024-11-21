@@ -127,6 +127,12 @@
   }
 
   @media (min-width: 768px) {
+    &__nav-list-item-link {
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 768px) {
     &__nav {
       display: block;
       max-height: 200px;

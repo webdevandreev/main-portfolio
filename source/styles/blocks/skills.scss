@@ -40,12 +40,42 @@
       &::before {
         content: "";
         position: absolute;
-        top: 23px;
+        top: 48px;
         left: -7px;
         transform: translateX(-50%);
         width: 3px;
-        height: 96%;
-        background-color: $color-text-main;
+        height: 94%;
+        background:
+          linear-gradient(180deg,
+          #7c72ff,
+          #5f9ae8,
+          #0078d4,
+          #6caea3,
+          #bf4080,
+          #cf4647,
+          #e44d26,
+          #f44e27,
+          #fbbc04);
+        background-size: 100% 300%; /* Увеличиваем размер фона для эффекта анимации */
+        animation: gradient-animation-vertical 10s ease infinite;
+
+        /* stylelint-disable-next-line max-nesting-depth */
+        @keyframes gradient-animation-vertical {
+          /* stylelint-disable-next-line max-nesting-depth */
+          0% {
+            background-position: 0% 0%;
+          }
+
+          /* stylelint-disable-next-line max-nesting-depth */
+          50% {
+            background-position: 0% 100%;
+          }
+
+          /* stylelint-disable-next-line max-nesting-depth */
+          100% {
+            background-position: 0% 0%;
+          }
+        }
       }
     }
   }
