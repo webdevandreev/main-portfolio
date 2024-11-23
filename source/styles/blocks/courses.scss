@@ -1,3 +1,11 @@
+.courses-skills-wrapper {
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки равной ширины */
+    gap: 20px; /* Расстояние между секциями */
+  }
+}
+
 .courses {
   margin-bottom: 20px;
 
@@ -5,6 +13,10 @@
     display: flex;
     margin: 0 auto 40px; /* Автоматические отступы по бокам */
     max-width: 800px; /* Задайте максимальную ширину, если нужно */
+  }
+
+  @media (min-width: 1024px) {
+    display: block;
   }
 
   &__title {
