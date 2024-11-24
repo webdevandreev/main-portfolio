@@ -11,12 +11,12 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    margin: 0 auto 40px; /* Автоматические отступы по бокам */
-    max-width: 800px; /* Задайте максимальную ширину, если нужно */
+    margin: 0 auto 40px;
   }
 
   @media (min-width: 1024px) {
     display: block;
+    align-self: center;
   }
 
   &__title {
@@ -30,6 +30,16 @@
       padding: 20px;
       font-size: 18px;
     }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 0;
+      padding-bottom: 5px;
+    }
+  }
+
+  &.dark-theme {
+    background-color: $color-dark;
+    color: $color-light;
   }
 
   &__list {
@@ -46,7 +56,7 @@
         position: absolute;
         left: -27px;
         transform: translateX(-50%);
-        width: 3px;
+        width: 2px;
         height: 100%;
         background-color: $color-text-main;
       }

@@ -4,6 +4,7 @@ function toggleTheme() {
     document.querySelector('.header'),
     document.querySelector('.main'),
     document.querySelector('.footer'),
+    document.querySelector('.curses'),
   ];
 
   elements.forEach((element) => {
@@ -27,6 +28,7 @@ function initThemeSwitcher() {
       document.querySelector('.main'),
       document.querySelector('.header__top'),
       document.querySelector('.footer'),
+      document.querySelector('.curses__list'),
     ];
 
     elements.forEach((element) => {
