@@ -3,7 +3,7 @@
   background-color: $background-color;
   color: $color-text-main;
   z-index: 1000;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s;
 
   &.dark-theme {
     background-color: $color-dark;

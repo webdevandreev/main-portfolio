@@ -60,6 +60,7 @@
 
   &.dark-theme {
     background-color: $color-dark;
+    transition: background-color 2.3s;
 
     .courses__list {
       /* stylelint-disable-next-line max-nesting-depth */
