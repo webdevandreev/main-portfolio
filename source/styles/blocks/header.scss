@@ -81,6 +81,7 @@
     left: 5px;
     width: 20px;
     height: 20px;
+    background-color: $color-dark;
     border-radius: 50%; /* Скругление кружка */
     transform: translateY(-50%); /* Центрирование по вертикали */
     transition: transform 0.3s; /* Плавный переход при перемещении */
