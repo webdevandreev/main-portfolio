@@ -38,12 +38,16 @@ function initThemeSwitcher() {
     });
   }
 
-  // Находим кнопку переключения темы и добавляем обработчик события
-  const themeToggleButton = document.querySelector(
-    '.header__theme-toggle button'
-  );
-  if (themeToggleButton) {
-    themeToggleButton.addEventListener('click', toggleTheme);
+  const slider = document.querySelector('.header__theme-toggle .slider');
+  if (slider) {
+    slider.addEventListener('click', () => {
+      slider.classList.toggle('active');
+      toggleTheme();
+
+      // Обновляем значение aria-pressed
+      const isActive = slider.classList.contains('active');
+      slider.setAttribute('aria-pressed', isActive);
+    });
   }
 }
 
