@@ -69,6 +69,10 @@
     border-radius: 25px; /* Скругление углов слайдера */
     cursor: pointer;
     transition: background-color 0.3s; /* Плавный переход цвета фона */
+
+    &.active {
+      background-color: $color-dark; /* Цвет фона слайдера в темной теме */
+    }
   }
 
   .thumb {
@@ -81,15 +85,14 @@
     transform: translateY(-50%); /* Центрирование по вертикали */
     transition: transform 0.3s; /* Плавный переход при перемещении */
     background-color: $color-light;
+
+    .slider .active & {
+      background-color: $color-dark; /* Цвет ползунка в темной теме */
+    }
   }
 
-  .slider.active .thumb {
+  .slider .active .thumb {
     transform: translate(25px, -50%);
-    background-color: $color-light;
-  }
-
-  .slider.active {
-    background-color: $color-dark;
   }
 
   @media (min-width: 768px) {

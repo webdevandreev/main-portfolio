@@ -21,6 +21,8 @@ function toggleTheme() {
 function initThemeSwitcher() {
   // Проверяем сохраненную тему при загрузке страницы
   const savedTheme = localStorage.getItem('theme');
+  const slider = document.querySelector('.header__theme-toggle .slider');
+
   if (savedTheme === 'dark') {
     const elements = [
       document.body,
@@ -36,9 +38,14 @@ function initThemeSwitcher() {
         element.classList.add('dark-theme');
       }
     });
+
+    // Устанавливаем класс active на слайдер, если тема темная
+    if (slider) {
+      slider.classList.add('active');
+      slider.setAttribute('aria-pressed', 'true');
+    }
   }
 
-  const slider = document.querySelector('.header__theme-toggle .slider');
   if (slider) {
     slider.addEventListener('click', () => {
       slider.classList.toggle('active');
