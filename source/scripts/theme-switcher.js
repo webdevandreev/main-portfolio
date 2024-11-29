@@ -5,6 +5,7 @@ function toggleTheme() {
     document.querySelector('.main'),
     document.querySelector('.footer'),
     document.querySelector('.courses'),
+    ...document.querySelectorAll('.skills__block-title')
   ];
 
   elements.forEach((element) => {
@@ -31,6 +32,7 @@ function initThemeSwitcher() {
       document.querySelector('.header__top'),
       document.querySelector('.footer'),
       document.querySelector('.courses'),
+      ...document.querySelectorAll('.skills__block-title')
     ];
 
     elements.forEach((element) => {

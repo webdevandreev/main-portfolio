@@ -137,6 +137,13 @@
       line-height: 1.4;
       color: $color-text-main;
 
+      @media screen and (min-width: 768px) {
+        /* stylelint-disable-next-line max-nesting-depth */
+        &.dark-theme {
+          color: $color-light; // Цвет для темной темы
+        }
+      }
+
       /* stylelint-disable-next-line max-nesting-depth */
       @media screen and (min-width: 768px) {
         text-align: start;
@@ -237,5 +244,11 @@
     opacity: 1;
     pointer-events: auto;
     max-height: 500px; /* Максимальная высота при раскрытии */
+  }
+
+  @media screen and (max-width: 767px) {
+    &__list-item {
+      color: $color-text-main;
+    }
   }
 }
