@@ -1,6 +1,6 @@
 .footer {
   padding: 20px 0;
-  background-color: $background-color; // Используем основной цвет фона
+  background-color: $background-color;
   color: $color-text-main;
   transition: background-color 0.3s, color 0.3s;
 
@@ -13,6 +13,9 @@
     font-size: 16px;
     margin-bottom: 20px;
     position: relative;
+    background-color: $color-light;
+    transition: background-color 0.3s;
+
 
     &::after {
       content: "";
@@ -84,15 +87,16 @@
     border-radius: 50%;
     background-color: rgba($color-text-main, 0.1);
     transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: rgba($color-text-main, 0.2);
-    }
   }
 
   &__icon {
-    fill: $color-text-main;
+    fill: $color-dark;
     transition: transform 0.3s ease;
+
+    .dark-theme & {
+      fill: $color-light;
+    }
+
 
     &:hover {
       transform: scale(1.1);

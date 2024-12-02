@@ -8,6 +8,8 @@
 
 .courses {
   margin-bottom: 20px;
+  background-color: $color-light;
+  transition: background-color 0.3s;
 
   @media screen and (min-width: 768px) {
     display: flex;

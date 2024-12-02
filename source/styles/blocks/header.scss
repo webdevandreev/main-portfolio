@@ -8,6 +8,15 @@
   &.dark-theme {
     background-color: $color-dark;
     color: $color-light;
+
+    .header__top {
+      background-color: $color-dark;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      &::after {
+        background-color: $color-light;
+      }
+    }
   }
 
   &__top {
@@ -37,21 +46,6 @@
   @media (max-width: 768px) {
     &__top::after {
       width: 100%;
-    }
-  }
-
-  /* stylelint-disable-next-line no-duplicate-selectors */
-  &.dark-theme {
-    background-color: $color-dark;
-    color: $color-light;
-
-    .header__top {
-      background-color: $color-dark;
-
-      /* stylelint-disable-next-line max-nesting-depth */
-      &::after {
-        background-color: $color-light;
-      }
     }
   }
 
@@ -85,7 +79,7 @@
     height: 12px;
     border-radius: 50%; /* Скругление кружка */
     transform: translateY(-50%); /* Центрирование по вертикали */
-    transition: transform 0.3s; /* Плавный переход при перемещении */
+    transition: transform 0.3s;
     background-color: $color-light;
   }
 

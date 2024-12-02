@@ -57,10 +57,6 @@ a {
   /* stylelint-disable-next-line no-unknown-custom-properties */
   color: var(--color-text-main);
   transition: color 0.3s;
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .visually-hidden {
