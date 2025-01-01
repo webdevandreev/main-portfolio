@@ -65,3 +65,109 @@
     text-align: center;
   }
 }
+
+/* .projects__block {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.projects__popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); // Затемнение фона
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px); // Начальное положение попапа (смещение вниз)
+  transition: opacity 0.3s, transform 0.3s; // Плавные переходы
+  padding: 20px;
+  text-align: center;
+}
+
+.projects__block:hover .projects__popup {
+  opacity: 1;
+  transform: translateY(0); // Конечное положение попапа (без смещения)
+}
+
+.projects__popup h3,
+.projects__popup p,
+.projects__tech-stack,
+.projects__cta {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.projects__popup h3 {
+  transition-delay: 0.1s;
+}
+
+.projects__popup p {
+  transition-delay: 0.2s;
+}
+
+.projects__tech-stack {
+  transition-delay: 0.3s;
+}
+
+.projects__cta {
+  transition-delay: 0.4s;
+}
+
+.projects__block:hover .projects__popup h3,
+.projects__block:hover .projects__popup p,
+.projects__block:hover .projects__tech-stack,
+.projects__block:hover .projects__cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects__cta {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #00b7c7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    background: #0095a8;
+    transform: scale(1.05); // Увеличение кнопки при наведении
+  }
+}
+
+.projects__cta-icon {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.projects__cta:hover .projects__cta-icon {
+  transform: translateX(5px); // Анимация стрелки при наведении
+}
+
+.projects__tech-stack {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+} */
