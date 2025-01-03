@@ -40,11 +40,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 
     &:hover {
       background-color: $project-block-bg-hover;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     &.loading {
@@ -64,42 +67,26 @@
     font-weight: 600;
     text-align: center;
   }
-}
 
-/* .projects__block {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  &__popup {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); // Затемнение фона
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s; // Плавные переходы
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
   }
-}
 
-.projects__popup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8); // Затемнение фона
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(20px); // Начальное положение попапа (смещение вниз)
-  transition: opacity 0.3s, transform 0.3s; // Плавные переходы
-  padding: 20px;
-  text-align: center;
-}
-
-.projects__block:hover .projects__popup {
-  opacity: 1;
-  transform: translateY(0); // Конечное положение попапа (без смещения)
+  &__block:hover .projects__popup {
+    opacity: 1;
+  }
 }
 
 .projects__popup h3,
@@ -107,24 +94,44 @@
 .projects__tech-stack,
 .projects__cta {
   opacity: 0;
-  transform: translateY(10px);
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .projects__popup h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
   transition-delay: 0.1s;
+  color: $color-light;
 }
 
 .projects__popup p {
+  margin-bottom: 10px;
   transition-delay: 0.2s;
 }
 
 .projects__tech-stack {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
   transition-delay: 0.3s;
 }
 
 .projects__cta {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  background: #00b7c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
   transition-delay: 0.4s;
+
+  &:hover {
+    background: #0095a8;
+  }
 }
 
 .projects__block:hover .projects__popup h3,
@@ -132,42 +139,4 @@
 .projects__block:hover .projects__tech-stack,
 .projects__block:hover .projects__cta {
   opacity: 1;
-  transform: translateY(0);
 }
-
-.projects__cta {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #00b7c7;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  text-decoration: none;
-
-  &:hover {
-    background: #0095a8;
-    transform: scale(1.05); // Увеличение кнопки при наведении
-  }
-}
-
-.projects__cta-icon {
-  margin-left: 5px;
-  transition: transform 0.3s;
-}
-
-.projects__cta:hover .projects__cta-icon {
-  transform: translateX(5px); // Анимация стрелки при наведении
-}
-
-.projects__tech-stack {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-
-  img {
-    width: 24px;
-    height: 24px;
-  }
-} */

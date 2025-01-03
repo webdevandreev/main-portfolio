@@ -6,8 +6,6 @@ $color-text-main: #171c28;
 $background-color: rgba(229, 235, 242, 1);
 $color-black: rgba(0, 0, 0, 1);
 $color-accent: rgba(0, 183, 199, 1);
-$project-block-width: 270px;
-$project-block-height: 179px;
 $project-block-bg: #cdd4e9;
 $project-block-bg-hover: #e0e0e0;
 $project-block-bg-loading: #cccccc;
@@ -38,6 +36,10 @@ $font-family-roboto: "Roboto", sans-serif;
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
+
+// Размеры
+$project-block-width: 270px;
+$project-block-height: 179px;
 
 // Медиа выражения
 @mixin mobile {
