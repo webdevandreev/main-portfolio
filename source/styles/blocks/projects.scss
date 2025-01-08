@@ -1,3 +1,12 @@
+:root {
+  --project-block-bg: #f0f0f0;
+  --project-block-bg-hover: #e0e0e0;
+  --project-block-width: 270px;
+  --project-block-height: 179px;
+  --project-link-color: #00b7c7;
+  --color-light: #ffffff;
+}
+
 // Миксин для медиа-запроса
 @mixin mobile {
   @media (max-width: 320px) {
@@ -34,9 +43,9 @@
   }
 
   &__block {
-    background-color: $project-block-bg;
-    width: $project-block-width;
-    height: $project-block-height;
+    background-color: var(--project-block-bg);
+    width: var(--project-block-width);
+    height: var(--project-block-height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,97 +55,120 @@
     transition: transform 0.3s, box-shadow 0.3s;
 
     &:hover {
-      background-color: $project-block-bg-hover;
+      background-color: var(--project-block-bg-hover);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    &.loading {
-      background-color: $project-block-bg-loading;
     }
 
     @include mobile {
       width: 100%;
       height: auto;
-      min-height: $project-block-height;
+      min-height: var(--project-block-height);
     }
-  }
-
-  &__link {
-    text-decoration: none;
-    color: $project-link-color;
-    font-weight: 600;
-    text-align: center;
   }
 
   &__popup {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8); // Затемнение фона
+    background: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s, transform 0.3s; // Плавные переходы
+    transition: opacity 0.3s, transform 0.3s;
     padding: 10px;
     text-align: center;
     font-size: 14px;
+    will-change: opacity, transform;
+
+    & h3,
+    & p,
+    & .projects__cta {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    & h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      transition-delay: 0.1s;
+      color: var(--color-light);
+    }
+
+    & p {
+      margin-bottom: 10px;
+      transition-delay: 0.2s;
+    }
+
+    & .projects__cta {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 12px;
+      background: #00b7c7;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      text-decoration: none;
+      transition-delay: 0.4s;
+
+      &:hover {
+        background: #0095a8;
+      }
+    }
   }
 
   &__block:hover .projects__popup {
     opacity: 1;
   }
-}
 
-.projects__popup h3,
-.projects__popup p,
-.projects__tech-stack,
-.projects__cta {
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.projects__popup h3 {
-  font-size: 16px;
-  margin-bottom: 5px;
-  transition-delay: 0.1s;
-  color: $color-light;
-}
-
-.projects__popup p {
-  margin-bottom: 10px;
-  transition-delay: 0.2s;
-}
-
-.projects__tech-stack {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  transition-delay: 0.3s;
-}
-
-.projects__cta {
-  margin-top: 10px;
-  padding: 5px 10px;
-  font-size: 12px;
-  background: #00b7c7;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s;
-  text-decoration: none;
-  transition-delay: 0.4s;
-
-  &:hover {
-    background: #0095a8;
+  &__block:hover .projects__popup h3,
+  &__block:hover .projects__popup p,
+  &__block:hover .projects__popup .projects__cta {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.projects__block:hover .projects__popup h3,
-.projects__block:hover .projects__popup p,
-.projects__block:hover .projects__tech-stack,
-.projects__block:hover .projects__cta {
-  opacity: 1;
+.projects__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #00b7c7;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects__block {
+    width: calc(#{$project-block-width} * 1.2); /* Увеличение ширины на 20% */
+    height: calc(#{$project-block-height} * 1.2); /* Увеличение высоты на 20% */
+  }
+
+  .projects__block img {
+    width: calc(#{$project-block-width} * 1.2); /* Масштабирование изображения */
+    height: calc(#{$project-block-height} * 1.2); /* Масштабирование изображения */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .projects__block {
+    width: calc(#{$project-block-width} * 1.2 * 1.2); /* Увеличение ширины на 20% */
+    height: calc(#{$project-block-height} * 1.2 * 1.2); /* Увеличение высоты на 20% */
+  }
+
+  .projects__block img {
+    width: calc(#{$project-block-width} * 1.2 * 1.2); /* Масштабирование изображения */
+    height: calc(#{$project-block-height} * 1.2 * 1.2); /* Масштабирование изображения */
+  }
 }
