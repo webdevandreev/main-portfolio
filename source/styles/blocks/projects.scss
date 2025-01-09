@@ -7,13 +7,6 @@
   --color-light: #ffffff;
 }
 
-// Миксин для медиа-запроса
-@mixin mobile {
-  @media (max-width: 320px) {
-    @content;
-  }
-}
-
 .projects {
   margin-bottom: 60px;
 
@@ -54,98 +47,107 @@
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 
-    &:hover {
-      background-color: var(--project-block-bg-hover);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    @include mobile {
+    @media (max-width: 768px) {
       width: 100%;
       height: auto;
       min-height: var(--project-block-height);
-    }
-  }
-
-  &__popup {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-    will-change: opacity, transform;
-
-    & h3,
-    & p,
-    & .projects__cta {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.3s, transform 0.3s;
-    }
-
-    & h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-      transition-delay: 0.1s;
-      color: var(--color-light);
-    }
-
-    & p {
-      margin-bottom: 10px;
-      transition-delay: 0.2s;
-    }
-
-    & .projects__cta {
-      margin-top: 10px;
-      padding: 5px 10px;
-      font-size: 12px;
-      background: #00b7c7;
-      color: #ffffff;
-      border: none;
-      border-radius: 5px;
       cursor: pointer;
-      transition: transform 0.3s;
-      text-decoration: none;
-      transition-delay: 0.4s;
-
-      &:hover {
-        background: #0095a8;
-      }
     }
-  }
 
-  &__block:hover .projects__popup {
-    opacity: 1;
-  }
-
-  &__block:hover .projects__popup h3,
-  &__block:hover .projects__popup p,
-  &__block:hover .projects__popup .projects__cta {
-    opacity: 1;
-    transform: translateY(0);
+    &:active .projects__popup {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
-.projects__close-btn {
+.projects__popup {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
   color: #ffffff;
-  font-size: 20px;
-  cursor: pointer;
-  transition: color 0.2s ease;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  will-change: opacity, transform;
 
-  &:hover {
-    color: #00b7c7;
+  h3,
+  p,
+  .projects__cta {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    transition-delay: 0.1s;
+    color: var(--color-light);
+  }
+
+  p {
+    margin-bottom: 10px;
+    transition-delay: 0.2s;
+  }
+
+  .projects__cta {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #00b7c7;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    transition-delay: 0.4s;
+
+    &:hover {
+      background: #0095a8;
+    }
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+
+    h3,
+    p,
+    .projects__cta {
+      opacity: 1;
+      transform: translateY(0);
+      color: ffffff;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .projects__popup {
+    visibility: visible;
+  }
+
+  .projects__block:hover {
+    background-color: var(--project-block-bg-hover);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .projects__block:hover .projects__popup {
+    opacity: 1;
+  }
+
+  .projects__block:hover .projects__popup h3,
+  .projects__block:hover .projects__popup p,
+  .projects__block:hover .projects__popup .projects__cta {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
