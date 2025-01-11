@@ -58,6 +58,17 @@
       visibility: visible;
       opacity: 1;
     }
+
+    &:hover {
+      transform: scale(1.05); /* Увеличение размера на 20% */
+      transition: transform 0.3s ease; /* Добавление анимации */
+      z-index: 1000; /* Установка z-index для правильного отображения */
+    }
+
+    &:hover .projects__popup h3,
+    &:hover .projects__popup p {
+      font-size: 12px;
+    }
   }
 }
 
@@ -186,11 +197,6 @@
 
   .projects__block:hover .projects__popup {
     opacity: 1;
-    width: 600px; // Установка ширины popup на 600px
-    height: 400px; // Установка высоты popup на 400px
-    left: 50%; // Центрирование popup по горизонтали
-    top: 50%; // Центрирование popup по вертикали
-    transform: translate(-50%, -50%); // Центрирование popup
   }
 
   .projects__block:hover .projects__popup h3,
