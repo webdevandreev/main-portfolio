@@ -127,6 +127,51 @@
       color: ffffff;
     }
   }
+
+  // Стили для мобильного разрешения
+  @media (max-width: 768px) {
+    position: fixed; // Изменено на fixed для раскрытия на весь экран
+    inset: 20px;
+    padding: 0 calc(12.5vw - 20px);
+    z-index: 1000;
+
+    body {
+      overflow-y: hidden;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
 }
 
 @media (min-width: 769px) {
@@ -141,6 +186,11 @@
 
   .projects__block:hover .projects__popup {
     opacity: 1;
+    width: 600px; // Установка ширины popup на 600px
+    height: 400px; // Установка высоты popup на 400px
+    left: 50%; // Центрирование popup по горизонтали
+    top: 50%; // Центрирование popup по вертикали
+    transform: translate(-50%, -50%); // Центрирование popup
   }
 
   .projects__block:hover .projects__popup h3,
@@ -149,6 +199,21 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  .projects__popup .close-btn {
+    display: none;
+  }
+}
+
+.projects__block img[alt] {
+  color: #00b7c7;
+}
+
+.projects__block img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
 }
 
 @media screen and (min-width: 1024px) {
