@@ -1,5 +1,3 @@
-// source/scripts/index.js
-
 import { initThemeSwitcher } from './theme-switcher.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   button.addEventListener('click', () => {
     nav.classList.toggle('visible');
     contentWrapper.classList.toggle('nav-open');
+    button.classList.toggle('active'); // Toggle the active class for animation
   });
 
   // Инициализация переключателя темы
