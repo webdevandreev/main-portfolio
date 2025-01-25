@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector('.header__button');
   const nav = document.querySelector('.header__nav');
   const contentWrapper = document.querySelector('.content-wrapper');
+  const navLinks = document.querySelectorAll('.header__nav-list-item-link');
 
   button.addEventListener('click', () => {
     nav.classList.toggle('visible');
@@ -13,4 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация переключателя темы
   initThemeSwitcher();
+
+  navLinks.forEach((link) => {
+    link.addEventListener('touchstart', () => {
+      link.classList.add('hover-effect');
+    });
+
+    link.addEventListener('touchend', () => {
+      link.classList.remove('hover-effect');
+    });
+  });
 });

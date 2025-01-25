@@ -71,6 +71,13 @@
       display: flex;
       gap: 15px;
     }
+
+    @media (max-width: 768px) {
+      &--logo {
+        width: 60px;
+        margin-top: 0;
+      }
+    }
   }
 
   &__link {
@@ -112,5 +119,11 @@
         justify-content: center;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 0;
   }
 }

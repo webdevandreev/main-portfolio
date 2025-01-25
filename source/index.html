@@ -9,9 +9,11 @@
   <link rel="preload" href="fonts/inter/Inter-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
   <script src="scripts/index.js" type="module"></script>
   <script src="scripts/accordion.js" defer></script>
   <script src="scripts/projects.js" defer></script>
+  <script src="scripts/smoothscroll.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -36,11 +38,11 @@
       </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#">навыки</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#">курсы</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#">проекты</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#">дополнительно</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#">контакты</a></li>
+          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#skills">навыки</a></li>
+          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#courses">курсы</a></li>
+          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#projects">проекты</a></li>
+          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#additional-skills">дополнительно</a></li>
+          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#contacts">контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -55,7 +57,7 @@
             клиентской части.
           </p>
           <div class="courses-skills-wrapper">
-            <section class="courses">
+            <section class="courses section" id="courses">
               <h2 class="courses__title">КУРСЫ И СЕРТИФИКАЦИЯ</h2>
               <ul class="courses__list">
                 <li class="courses__item">
@@ -85,7 +87,7 @@
                 </li>
               </ul>
             </section>
-            <section class="skills" tabindex="0">
+            <section class="skills section" tabindex="0" id="skills">
               <h2 class="skills__title">HARD SKILLS
                 <span class="skills__title-underline"></span>
               </h2>
@@ -160,7 +162,7 @@
               </div>
             </section>
           </div>
-          <section class="projects">
+          <section class="projects section" id="projects">
             <h2 class="projects__title">РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
             <div class="projects__container">
               <div class="projects__block">
@@ -198,7 +200,7 @@
               </div>
             </div>
           </section>
-          <section class="additional-skills">
+          <section class="additional-skills" id="additional-skills">
             <h2 class="additional-skills__title">ADDITIONAL SKILLS</h2>
             <div class="additional-skills__container">
               <div class="additional-skills__item">
@@ -234,7 +236,7 @@
       </main>
 
       <!-- в index.html -->
-      <footer class="footer">
+      <footer class="footer section" id="contacts">
         <div class="footer__container">
           <h2 class="footer__title"><span>Связаться со мной</span></h2>
           <div class="footer__content">

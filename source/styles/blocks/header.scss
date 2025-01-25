@@ -184,6 +184,12 @@
           font-size: 14px;
           font-weight: 500;
           padding: 10px;
+          transition: color 0.3s ease;
+
+          /* stylelint-disable-next-line max-nesting-depth */
+          &:hover {
+            color: #00b7c7; // Цвет ховера
+          }
         }
       }
     }
@@ -272,5 +278,16 @@
     @media (min-width: 768px) {
       display: none; /* Hide on larger screens */
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__nav-list-item-link {
+    transition: background-color 0.3s ease;
+  }
+
+  .header__nav-list-item-link:active,
+  .header__nav-list-item-link.hover-effect {
+    background-color: #cccccc;
   }
 }
