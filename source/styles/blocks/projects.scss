@@ -45,6 +45,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    border: #00b7c7 solid 1px;
     transition: transform 0.3s, box-shadow 0.3s;
 
     @media (max-width: 768px) {
@@ -71,6 +72,7 @@
     }
   }
 }
+
 
 .projects__popup {
   position: absolute;
