@@ -3,7 +3,7 @@ name: Deploy to GitHub-Pages
 on:
   push:
     branches:
-      - task1
+      - deploy  # Измените на deploy
 
 jobs:
   deploy:
@@ -41,4 +41,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./build
-          branch: task1
+          branch: deploy  # Измените на deploy

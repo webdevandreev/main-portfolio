@@ -3,7 +3,7 @@ name: Project check
 on:
   push:
     branches:
-      - task1
+      - deploy  # Измените на deploy
   pull_request:
     branches:
       - '*'
