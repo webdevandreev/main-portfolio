@@ -55,13 +55,19 @@
       cursor: pointer;
     }
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: 80%; /* Устанавливаем ширину 100% для разрешений от 768px до 1023px */
+      height: auto; /* Высота может быть авто, чтобы адаптироваться к содержимому */
+      min-height: var(--project-block-height); /* Минимальная высота остается */
+    }
+
     &:active .projects__popup {
       visibility: visible;
       opacity: 1;
     }
 
     &:hover {
-      transform: scale(1.05); /* Увеличение размера на 20% */
+      transform: scale(1.05); /* Увеличение размера на 5% */
       transition: transform 0.3s ease; /* Добавление анимации */
       z-index: 1000; /* Установка z-index для правильного отображения */
     }
@@ -72,7 +78,6 @@
     }
   }
 }
-
 
 .projects__popup {
   position: absolute;
@@ -241,24 +246,24 @@
 
 @media screen and (min-width: 1024px) {
   .projects__block {
-    width: calc(#{$project-block-width} * 1.2); /* Увеличение ширины на 20% */
-    height: calc(#{$project-block-height} * 1.2); /* Увеличение высоты на 20% */
+    width: calc(var(--project-block-width) * 1.4); /* Увеличение ширины на 20% */
+    height: calc(var(--project-block-height) * 1.4); /* Увеличение высоты на 20% */
   }
 
   .projects__block img {
-    width: calc(#{$project-block-width} * 1.2); /* Масштабирование изображения */
-    height: calc(#{$project-block-height} * 1.2); /* Масштабирование изображения */
+    width: calc(var(--project-block-width) * 1.4); /* Масштабирование изображения */
+    height: calc(var(--project-block-height) * 1.4); /* Масштабирование изображения */
   }
 }
 
 @media screen and (min-width: 1440px) {
   .projects__block {
-    width: calc(#{$project-block-width} * 1.2 * 1.2); /* Увеличение ширины на 20% */
-    height: calc(#{$project-block-height} * 1.2 * 1.2); /* Увеличение высоты на 20% */
+    width: calc(var(--project-block-width) * 1.2 * 1.2); /* Увеличение ширины на 20% */
+    height: calc(var(--project-block-height) * 1.2 * 1.2); /* Увеличение высоты на 20% */
   }
 
   .projects__block img {
-    width: calc(#{$project-block-width} * 1.2 * 1.2); /* Масштабирование изображения */
-    height: calc(#{$project-block-height} * 1.2 * 1.2); /* Масштабирование изображения */
+    width: calc(var(--project-block-width) * 1.2 * 1.2); /* Масштабирование изображения */
+    height: calc(var(--project-block-height) * 1.2 * 1.2); /* Масштабирование изображения */
   }
 }
