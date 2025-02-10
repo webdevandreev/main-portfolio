@@ -44,8 +44,9 @@ blocks.forEach((block) => {
 
 // Добавляем обработчики для каждого попапа
 popups.forEach((popup) => {
-  popup.addEventListener('touchend', (event) => {
-    if (event.target.closest('.projects__popup') === popup) {
+  // Обработчик для закрытия попапа по нажатию на область
+  document.addEventListener('touchend', (event) => {
+    if (popup.classList.contains('active') && !popup.contains(event.target)) {
       popup.classList.remove('active');
       document.body.style.overflowY = 'auto';
     }
