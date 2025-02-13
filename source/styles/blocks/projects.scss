@@ -56,20 +56,15 @@
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
-      width: 80%; /* Устанавливаем ширину 100% для разрешений от 768px до 1023px */
-      height: auto; /* Высота может быть авто, чтобы адаптироваться к содержимому */
-      min-height: var(--project-block-height); /* Минимальная высота остается */
-    }
-
-    &:active .projects__popup {
-      visibility: visible;
-      opacity: 1;
+      width: 80%;
+      height: auto;
+      min-height: var(--project-block-height);
     }
 
     &:hover {
-      transform: scale(1.05); /* Увеличение размера на 5% */
-      transition: transform 0.3s ease; /* Добавление анимации */
-      z-index: 1000; /* Установка z-index для правильного отображения */
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+      z-index: 1000;
     }
 
     &:hover .projects__popup h3,
@@ -151,51 +146,6 @@
     }
   }
 
-  // Стили для мобильного разрешения
-  @media (max-width: 768px) {
-    position: fixed; // Изменено на fixed для раскрытия на весь экран
-    inset: 20px;
-    padding: 0 calc(12.5vw - 20px);
-    z-index: 1000;
-
-    body {
-      overflow-y: hidden;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      color: #ffffff;
-      font-size: 24px;
-      line-height: 30px;
-      text-align: center;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 20px;
-        height: 2px;
-        background: #ffffff;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-
-      &::after {
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
-    }
-  }
-
   .projects__popup-title {
     padding-top: 40px;
     letter-spacing: 1px;
@@ -207,7 +157,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 320px) {
   .projects__popup {
     visibility: visible;
   }
@@ -226,10 +176,6 @@
   .projects__block:hover .projects__popup .projects__cta {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  .projects__popup .close-btn {
-    display: none;
   }
 }
 
