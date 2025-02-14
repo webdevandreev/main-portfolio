@@ -49,14 +49,14 @@
     transition: transform 0.3s, box-shadow 0.3s;
 
     @media (max-width: 768px) {
-      width: 100%;
+      width: 80%;
       height: auto;
       min-height: var(--project-block-height);
       cursor: pointer;
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
-      width: 80%;
+      width: 44%;
       height: auto;
       min-height: var(--project-block-height);
     }
@@ -75,6 +75,7 @@
 }
 
 .projects__popup {
+  display: flex;
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
@@ -87,7 +88,7 @@
   transition: opacity 0.3s ease, transform 0.3s;
   padding: 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   will-change: opacity, transform;
 
   h3,
@@ -99,7 +100,7 @@
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 5px;
     transition-delay: 0.1s;
     color: var(--color-light);
@@ -115,7 +116,7 @@
     padding: 5px 10px;
     font-size: 12px;
     background: #00b7c7;
-    color: #ffffff;
+    color: $color-dark;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -147,7 +148,6 @@
   }
 
   .projects__popup-title {
-    padding-top: 40px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
