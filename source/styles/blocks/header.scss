@@ -1,6 +1,28 @@
-.header {
-  position: sticky;
+.header-container {
+  position: fixed; /* Фиксируем контейнер заголовка */
   top: 0;
+  left: 20px;
+  right: 20px;
+  z-index: 1000; /* Устанавливаем высокий z-index */
+
+  @media (min-width: 425px) {
+    left: 34px;
+    right: 34px;
+  }
+
+  @media (min-width: 768px) {
+    left: 80px;
+    right: 80px;
+  }
+
+  @media (min-width: 1440px) {
+    left: 100px;
+    right: 100px;
+  }
+}
+
+.header {
+  position: relative;
   background-color: $background-color;
   color: $color-text-main;
   z-index: 1000;
@@ -112,7 +134,7 @@
     }
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     &__theme-toggle {
       margin-top: 10px;
     }

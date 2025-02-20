@@ -11,8 +11,8 @@
   background-color: $background-color;
   position: relative;
   z-index: 999;
+}
 
-  &.nav-open {
-    transform: translateY(-24px);
-  }
+.page__body {
+  padding-top: 80px;
 }

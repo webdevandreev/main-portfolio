@@ -16,35 +16,36 @@
 
 <body class="page__body">
   <div class="page__wrapper">
-    <header class="header">
-      <div class="header__top">
-        <div class="header__logo">Web Dev<br><span>developer</span></div>
-        <button class="header__button" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
-        <div class="header__theme-toggle">
-          <svg class="header__theme-icon header__theme-icon--sun" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor" />
-          </svg>
-          <button class="slider" type="button" aria-pressed="false" aria-label="Переключить тему">
-            <span class="thumb" role="presentation"></span>
+    <div class="header-container">
+      <header class="header">
+        <div class="header__top">
+          <div class="header__logo">Web Dev<br><span>developer</span></div>
+          <button class="header__button" type="button">
+            <span class="visually-hidden">Меню</span>
           </button>
-          <svg class="header__theme-icon header__theme-icon--moon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" fill="currentColor" />
-          </svg>
+          <div class="header__theme-toggle">
+            <svg class="header__theme-icon header__theme-icon--sun" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor" />
+            </svg>
+            <button class="slider" type="button" aria-pressed="false" aria-label="Переключить тему">
+              <span class="thumb" role="presentation"></span>
+            </button>
+            <svg class="header__theme-icon header__theme-icon--moon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" fill="currentColor" />
+            </svg>
+          </div>
         </div>
-      </div>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#skills">навыки</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#courses">курсы</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#projects">проекты</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#additional-skills">дополнительно</a></li>
-          <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#contacts">контакты</a></li>
-        </ul>
-      </nav>
-    </header>
-
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#skills">навыки</a></li>
+            <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#courses">курсы</a></li>
+            <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#projects">проекты</a></li>
+            <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#additional-skills">дополнительно</a></li>
+            <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#contacts">контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
     <div class="content-wrapper">
       <main class="main">
         <div class="main__container">
