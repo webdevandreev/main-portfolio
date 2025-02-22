@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+export function initSmoothScroll() {
   const links = document.querySelectorAll('.header__nav-list-item-link');
 
   links.forEach((link) => {
@@ -67,4 +67,4 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     window.scrollTo(0, 0);
   });
-});
+}
