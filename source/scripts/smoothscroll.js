@@ -15,11 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Устанавливаем margin-top для целевой секции
-      targetSection.style.marginTop = '50px';
+      // Проверяем, является ли целевая секция последней
+      const isLastSection = Array.from(links).indexOf(link) === links.length - 1;
+
+      // Устанавливаем margin-top для целевой секции, если она не последняя
+      if (!isLastSection) {
+        targetSection.style.marginTop = '50px';
+      }
 
       const startPosition = window.pageYOffset; // Начальная позиция
-      const targetPosition = targetSection.getBoundingClientRect().top + startPosition - 50; // Конечная позиция с учетом margin-top
+      const targetPosition = targetSection.getBoundingClientRect().top + startPosition - (isLastSection ? 0 : 50); // Конечная позиция с учетом margin-top
       const distance = targetPosition - startPosition; // Расстояние для прокрутки
 
       const duration = 1000; // Длительность анимации в миллисекундах
