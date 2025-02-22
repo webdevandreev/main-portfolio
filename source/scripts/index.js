@@ -23,5 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('touchend', () => {
       link.classList.remove('hover-effect');
     });
+
+    // Добавляем обработчик клика для сворачивания навигации
+    link.addEventListener('click', () => {
+      // Скрываем навигацию
+      nav.classList.remove('visible');
+      contentWrapper.classList.remove('nav-open');
+      button.classList.remove('active'); // Убираем активный класс у кнопки
+    });
   });
 });

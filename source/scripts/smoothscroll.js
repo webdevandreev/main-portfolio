@@ -15,14 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const startPosition = window.pageYOffset; // Начальная позиция
-      const targetPosition = targetSection.getBoundingClientRect().top + startPosition; // Конечная позиция
-      const distance = targetPosition - startPosition; // Расстояние для прокрутки
+      // Устанавливаем margin-top для целевой секции
+      targetSection.style.marginTop = '50px';
 
-      if (distance < 0) {
-        window.scrollTo(0, startPosition + distance);
-        return;
-      }
+      const startPosition = window.pageYOffset; // Начальная позиция
+      const targetPosition = targetSection.getBoundingClientRect().top + startPosition - 50; // Конечная позиция с учетом margin-top
+      const distance = targetPosition - startPosition; // Расстояние для прокрутки
 
       const duration = 1000; // Длительность анимации в миллисекундах
       let startTime = null;
