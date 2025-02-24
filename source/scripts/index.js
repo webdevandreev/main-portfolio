@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const button = document.querySelector('.header__button');
   const nav = document.querySelector('.header__nav');
   const contentWrapper = document.querySelector('.content-wrapper');
@@ -40,12 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Динамическая загрузка аккордеона
-  const skillsListItems = document.querySelectorAll('.skills__block');
-  skillsListItems.forEach((item) => {
-    item.addEventListener('click', async () => {
-      const { initAccordion } = await import('./accordion.js');
-      initAccordion(); // Инициализация аккордеона
-    });
-  });
+  // Инициализация аккордеона при загрузке страницы
+  const { initAccordion } = await import('./accordion.js');
+  initAccordion(); // Инициализация аккордеона
 });
