@@ -8,23 +8,15 @@ export function initSmoothScroll() {
       const targetSection = document.getElementById(targetId); // Находим целевую секцию
 
       if (!targetSection) {
-        return;
+        return; // Если секция не найдена, выходим
       }
 
       if (targetSection.offsetParent === null) {
-        return;
-      }
-
-      // Проверяем, является ли целевая секция последней
-      const isLastSection = Array.from(links).indexOf(link) === links.length - 1;
-
-      // Устанавливаем margin-top для целевой секции, если она не последняя
-      if (!isLastSection) {
-        targetSection.style.marginTop = '50px';
+        return; // Если секция скрыта, выходим
       }
 
       const startPosition = window.pageYOffset; // Начальная позиция
-      const targetPosition = targetSection.getBoundingClientRect().top + startPosition - (isLastSection ? 0 : 50); // Конечная позиция с учетом margin-top
+      const targetPosition = targetSection.getBoundingClientRect().top + startPosition; // Конечная позиция
       const distance = targetPosition - startPosition; // Расстояние для прокрутки
 
       const duration = 1000; // Длительность анимации в миллисекундах
@@ -65,6 +57,6 @@ export function initSmoothScroll() {
   });
 
   window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Прокручиваем в начало страницы при загрузке
   });
 }

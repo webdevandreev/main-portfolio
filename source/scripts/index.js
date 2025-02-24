@@ -28,19 +28,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // Добавляем обработчик клика для сворачивания навигации
-    link.addEventListener('click', async () => {
+    link.addEventListener('click', () => {
       // Скрываем навигацию
       nav.classList.remove('visible');
       contentWrapper.classList.remove('nav-open');
       button.classList.remove('active'); // Убираем активный класс у кнопки
-
-      // Динамическая загрузка smooth scroll
-      const { initSmoothScroll } = await import('./smoothscroll.js');
-      initSmoothScroll(); // Инициализация плавной прокрутки
     });
   });
 
   // Инициализация аккордеона при загрузке страницы
   const { initAccordion } = await import('./accordion.js');
   initAccordion(); // Инициализация аккордеона
+
+  // Инициализация плавной прокрутки при загрузке страницы
+  const { initSmoothScroll } = await import('./smoothscroll.js');
+  initSmoothScroll(); // Инициализация плавной прокрутки
 });
