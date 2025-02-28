@@ -189,12 +189,19 @@
       gap: 15px;
       background-color: transparent;
       color: $color-text-main;
-      transition: background-color 0.3s;
 
       /* stylelint-disable-next-line max-nesting-depth */
       &.dark-theme {
         background-color: $color-dark;
         color: $color-light;
+        transition: background-color 1.4s;
+      }
+
+      @media (max-width: 768px) {
+        /* stylelint-disable-next-line max-nesting-depth */
+        &.dark-theme {
+          transition: background-color 0.3s;
+        }
       }
 
       /* stylelint-disable-next-line max-nesting-depth */
