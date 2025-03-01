@@ -321,3 +321,9 @@
     background-color: #cccccc;
   }
 }
+
+@media (max-width: 767px) {
+  .header__nav-list {
+    transition: background-color 0.3s ease;
+  }
+}
