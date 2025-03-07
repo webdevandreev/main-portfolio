@@ -137,6 +137,7 @@
       margin: 0;
       line-height: 1.4;
       color: $color-text-main;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 
       @media screen and (min-width: 768px) {
         /* stylelint-disable-next-line max-nesting-depth */
@@ -251,5 +252,27 @@
     &__list-item {
       color: $color-text-main;
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skills__block-title {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center;
+    text-align: center;
+    cursor: pointer; /* Указатель на интерактивность */
+  }
+
+  .skills__icon {
+    margin-left: 8px; /* Отступ между заголовком и иконкой */
+    width: 17px; /* Ширина иконки */
+    height: 17px; /* Высота иконки */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skills__icon {
+    display: none; /* Скрываем иконку */
   }
 }
