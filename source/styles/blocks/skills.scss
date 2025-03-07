@@ -156,8 +156,8 @@
       }
     }
 
-    &--html-css {
-      background-color: #df9477;
+    &--html-css {/* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(180deg, #f7e5de, #f2d5ca, #e9b4a0, #df9477, #d5744e);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
       /* stylelint-disable-next-line max-nesting-depth */
       @media screen and (min-width: 768px) {
