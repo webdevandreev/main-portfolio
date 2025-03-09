@@ -141,11 +141,15 @@
   &__item-status {
     font-size: 12px;
     font-style: italic;
-    color: #666666;
+    color: $color-dark;
     margin-top: 0;
     margin-bottom: 2px;
     padding-left: 15px;
     position: relative;
+
+    &.dark-theme {
+      color: $color-light;
+    }
 
     &::before {
       content: "";

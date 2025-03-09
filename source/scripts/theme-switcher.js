@@ -8,6 +8,7 @@ function toggleTheme() {
     ...document.querySelectorAll('.skills__block-title'),
     document.querySelector('.header__nav-list'),
     document.querySelector('.header__button'),
+    ...document.querySelectorAll('.courses__item-status'),
   ];
 
   elements.forEach((element) => element?.classList.toggle('dark-theme'));
