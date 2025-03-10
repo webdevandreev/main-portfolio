@@ -7,7 +7,6 @@
 }
 
 .courses {
-  margin-bottom: 20px;
   padding-top: 50px;
   background-color: $color-light;
   transition: background-color 0.3s;
@@ -49,6 +48,7 @@
     list-style-type: none;
     padding: 0;
     position: relative;
+    margin-bottom: 0;
 
     @media screen and (min-width: 768px) {
       margin-left: 30px;
