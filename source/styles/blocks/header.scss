@@ -261,53 +261,54 @@
   &__button {
     display: flex;
     position: relative;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     width: 23px;
     height: 23px;
+    padding: 0;
     background: transparent;
     border: none;
     cursor: pointer;
+    align-items: center;
+    transition: all 0.3s ease;
 
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      width: 93%;
-      height: 3px;
-      background-color: $color-text-main;
-      transition: all 0.3s ease;
+    .theme-indicator {
       position: absolute;
       left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-dark;
+      transition: all 0.2s ease;
+      transform-origin: center;
       border-radius: 2px;
     }
 
-    &.dark-theme::before,
-    &.dark-theme::after {
-      background-color: $color-light;
+    /* Начальные позиции */
+    .theme-indicator:first-child {
+      transform: translateY(-4px);
     }
 
-    &::before {
-      top: 5px; /* Позиция верхней полоски */
+    .theme-indicator:last-child {
+      transform: translateY(4px);
     }
 
-    &::after {
-      bottom: 5px; /* Позиция нижней полоски */
+    /* Активное состояние */
+    &.active .theme-indicator:first-child {
+      transform: rotate(45deg);
+      transform-origin: center;
     }
 
-    &.active::before {
-      transform: rotate(45deg) translate(3px, 5px); /* Rotate the first line */
-    }
-
-    &.active::after {
-      transform: rotate(-45deg) translate(2px, -5px); /* Rotate the second line */
+    &.active .theme-indicator:last-child {
+      transform: rotate(-45deg);
+      transform-origin: center;
     }
 
     @media (min-width: 768px) {
       display: none; /* Hide on larger screens */
     }
   }
+}
+
+.dark-theme .header__button .theme-indicator {
+  background-color: $color-light; /* Цвет для темной темы */
 }
 
 @media (max-width: 768px) {
