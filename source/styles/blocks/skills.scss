@@ -234,7 +234,7 @@
     // Стили для разрешения 768px и выше
     @media screen and (min-width: 768px) {
       margin-left: 20px;
-      max-height: 500px; /* Устанавливаем максимальную высоту */
+      max-height: 500px;
       opacity: 1; /* Делаем видимыми */
       pointer-events: auto; /* Включаем события мыши */
       line-height: 23px;
@@ -245,6 +245,7 @@
     opacity: 1;
     pointer-events: auto;
     max-height: 500px; /* Максимальная высота при раскрытии */
+    padding-bottom: 10px;
   }
 
   @media screen and (max-width: 767px) {
